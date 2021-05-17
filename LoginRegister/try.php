@@ -1,5 +1,5 @@
 <?php
-
+//not used (don't use it )
 function retrivevisits($drusername ,$patientid)
     {
         $drusername = $this->prepareData($drusername);
