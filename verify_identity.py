@@ -4,7 +4,7 @@ import time
 import requests
 import json
 import time
-### check for time now
+# check for time now
 time_now = time.localtime() 
 day = "2021-05-17"
 timeStamp="17:00:00"
