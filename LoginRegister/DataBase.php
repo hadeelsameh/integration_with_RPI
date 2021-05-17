@@ -337,6 +337,18 @@ class DataBase
             echo json_encode($response ,JSON_PRETTY_PRINT);
         }  
     }
+    
+    function verifypatient($day , $time , $id )
+    {
+        $day = $this->prepareData($day);
+        $time = $this->prepareData($time);
+        $id = $this->prepareData($id);
+        $verified=1;
+        $this->sql ="update visitstimetable  set verified='" . $verified . "' where patientid='" . $id . "' && day='" . $day . "' && time='" . $time . "'";
+        if (mysqli_query($this->connect, $this->sql)) {
+            return true;
+        } else return false;
+    }
 
       
 }
